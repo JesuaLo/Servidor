@@ -6,6 +6,9 @@
     <title>Resultado</title>
 </head>
 <body>
+    <?php
+    echo $_POST['nombre'];
+    ?>
     <p>Esto es el resultado del formulario.</p>
 </body>
 </html>
