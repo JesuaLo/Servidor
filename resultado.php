@@ -66,7 +66,6 @@
             <p>el resultado de <?= $op1 ?> <?= $oper ?> <?= $op2 ?> es <?= $res ?></p><?php
         }
     ?>
-
-    <?= print_r($_GET) ?>
+    <a href="calculadora.html"><button>Volver</button></a>
 </body>
 </html>
