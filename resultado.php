@@ -7,18 +7,20 @@
 </head>
 <body>
     <?php
+
+    require 'auxiliar.php';
+
     $errores = [];
 
-        if (isset($_GET['op1'])) {
+        if (isset($_GET['op1'])):
             $op1 = trim($_GET['op1']);
-            if (empty($op1)) {
-                $errores[] = 'El primer operando es obligatorio';
-            } else {
-                if (!is_numeric($op1)) {
-                    $errores[] = 'El primer operando debe ser numérico';
-                }
-            }
-        }
+        elseif (empty($op1)):
+            $errores[] = 'El primer operando es obligatorio';
+        elseif (!is_numeric($op1)):
+            $errores[] = 'El primer operando debe ser numérico';
+        else:
+            $errores[] = 'No existe el primer operando';
+        endif;
 
         if (isset($_GET['op2'])) {
             $op2 = trim($_GET['op2']);
